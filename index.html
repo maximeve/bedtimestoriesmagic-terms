@@ -5,15 +5,342 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Terms of Service — Bedtime Stories Magic</title>
     <meta name="description" content="Terms of Service for Bedtime Stories Magic." />
-    <link rel="stylesheet" href="assets/legal.css" />
+    <style>
+/* Legal pages — GitHub Pages friendly (relative paths, no build step) */
+
+:root {
+  --bg: #faf8f5;
+  --bg-card: #ffffff;
+  --text: #1c1917;
+  --text-muted: #57534e;
+  --accent: #4338ca;
+  --accent-hover: #3730a3;
+  --border: #e7e5e4;
+  --warning-bg: #fffbeb;
+  --warning-border: #fcd34d;
+  --radius: 12px;
+  --shadow: 0 1px 3px rgba(28, 25, 23, 0.06);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --measure: 42rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 106%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+.site-header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.site-header__inner {
+  max-width: calc(var(--measure) + 4rem);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.site-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--accent);
+}
+
+.nav-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-legal a {
+  text-decoration: none;
+}
+
+.nav-legal a[aria-current="page"] {
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main {
+  max-width: calc(var(--measure) + 4rem);
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.doc-hero {
+  margin-bottom: 2.25rem;
+}
+
+.doc-hero h1 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.doc-meta {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.notice {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.notice strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.prose {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.prose h2 {
+  margin: 2.25rem 0 0.75rem;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.prose h2:first-of-type {
+  margin-top: 1.5rem;
+}
+
+.prose h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.prose p {
+  margin: 0.85rem 0;
+}
+
+.prose ul {
+  margin: 0.75rem 0;
+  padding-left: 1.35rem;
+}
+
+.prose li {
+  margin: 0.4rem 0;
+}
+
+.prose li::marker {
+  color: var(--text-muted);
+}
+
+.prose strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.prose hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.prose .fine-print {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.prose th,
+.prose td {
+  padding: 0.65rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.prose th {
+  font-weight: 600;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Landing (index) */
+.landing {
+  text-align: center;
+  padding: 2rem 0 1rem;
+}
+
+.landing h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.landing .lede {
+  max-width: 28rem;
+  margin: 0 auto 2.5rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.legal-card {
+  display: block;
+  padding: 1.35rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.legal-card:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 4px 14px rgba(67, 56, 202, 0.08);
+}
+
+.legal-card h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--accent);
+  border: none;
+  padding: 0;
+}
+
+.legal-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0a09;
+    --bg-card: #1c1917;
+    --text: #fafaf9;
+    --text-muted: #a8a29e;
+    --accent: #a5b4fc;
+    --accent-hover: #c7d2fe;
+    --border: #292524;
+    --warning-bg: #292524;
+    --warning-border: #78716c;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  .legal-card:hover {
+    border-color: #4c1d95;
+  }
+}
+    </style>
   </head>
   <body>
     <header class="site-header">
       <div class="site-header__inner">
-        <p class="site-title"><a href="index.html">Bedtime Stories Magic</a></p>
+        <p class="site-title">Bedtime Stories Magic</p>
         <nav class="nav-legal" aria-label="Legal documents">
-          <a href="privacy-policy.html">Privacy</a>
-          <a href="terms-of-service.html" aria-current="page">Terms</a>
+          <span>Privacy</span>
+          <span aria-current="page">Terms</span>
         </nav>
       </div>
     </header>
@@ -112,9 +439,7 @@
           Email: <a href="mailto:maxime-vaneijndhoven@hotmail.com">maxime-vaneijndhoven@hotmail.com</a>
         </p>
 
-        <footer class="site-footer">
-          <a href="index.html">← Legal overview</a>
-        </footer>
+        
       </article>
     </main>
   </body>
